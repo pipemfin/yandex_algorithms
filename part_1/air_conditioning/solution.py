@@ -7,9 +7,9 @@ for line in input:
 		params.append(obj)
 input.close()
 if (params[2] == 'freeze'):
-	output.write(params[0] if int(params[0]) < int(params[1]) else params[1])
+	output.write(str(min(int(params[0]), int(params[1]))))
 elif (params[2] == 'heat'):
-	output.write(params[1] if int(params[0]) < int(params[1]) else params[0])
+	output.write(str(max(int(params[0]), int(params[1]))))
 elif (params[2] == 'auto'):
 	output.write(params[1])
 else:
